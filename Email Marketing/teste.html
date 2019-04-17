@@ -1,0 +1,126 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="jquery.maskedinput.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#cpf").mask("999.999.999-99", {completed:function(){}});
+            $("#cpf2").mask("999.999.999-99", {completed:function(){}});
+            $("#celular").mask("(99) 99999-999", {completed:function(){}});
+            $("#celular2").mask("(99) 99999-999", {completed:function(){}});
+        });
+    </script>
+
+    <style>
+        input[type=file]{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<section id="contact1">
+    <div class="contact-section1">
+        <div class="container">
+            <form id="form1" name="form1" method="post" action="indexmail.php" enctype="multipart/form-data">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="construtora">*Você está comprando um imóvel de alguma construtora?</label>
+                        <select class="form-control" id="construtora" name="construtora" style="height: 34px" required>
+                            <option value=""></option>
+                            <option value="CURY">CURY</option>
+                            <option value="PLANO">PLANO</option>
+                            <option value="SUGOI">SUGOI</option>
+                            <option value="DIRECIONAL">DIRECIONAL</option>
+                            <option value="GNO">GNO</option>
+                            <option value="METROCASA">METROCASA</option>
+                            <option value="ALMEIDA">ALMEIDA</option>
+                            <option value="JOTHA">JOTHA</option>
+                            <option value="QGDI">QGDI</option>
+                            <option value="AB+">AB+</option>
+                            <option value="ARQUIPLAN">ARQUIPLAN</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="valor">*Qual o valor de compra e venda da unidade em interesse?</label>
+                        <input type="number" class="form-control" id="valor" name="valor" placeholder=" 0,00 " step="any" required>
+                    </div>
+                    <div class="form-group">
+                    <label>
+                        Por favor, insira seu nome completo e CPF. Se o Sr(a) estiver comprando conjuntamente com outra pessoa, insira também os dados da mesma.
+                    </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">*Nome 1º Proponente:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">*CPF 1º Proponente:</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome2">Nome 2º Proponente:</label>
+                        <input type="text" class="form-control" id="nome2"  name="nome2" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf2">CPF 2º Proponente:</label>
+                        <input type="text" class="form-control"  id="cpf2" name="cpf2" placeholder="CPF">
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">*Celular:</label>
+                        <input type="text" class="form-control"  id="celular" name="celular" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="celular2">Celular 2:</label>
+                        <input type="text" class="form-control"  id="celular2" name="celular2">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Comprovante">*Comprovante de Endereço</label>
+                        <input type="file" class="form-control" id="comprovante" name="comprovante" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comprovanteRenda">*Comprovante de Renda</label>
+                        <input type="file" class="form-control" id="comprovanteRenda" name="comprovanteRenda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Carteira">Carteira de Trabalho</label>
+                        <input type="file" class="form-control" id="carteira" name="carteira">
+                    </div>
+                    <div class="form-group">
+                        <label for="Imposto">Imposto de Renda</label>
+                        <input type="file" class="form-control" id="imposto" name="imposto">
+                    </div>
+                    <div class="form-group">
+                        <label for="Outros">Outros Documentos</label>
+                        <input type="file" class="form-control" id="outros" name="outros">
+                    </div>
+                    <div>
+
+                        <button type="submit1" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Enviar </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+</section>
+</body>
+</html>
